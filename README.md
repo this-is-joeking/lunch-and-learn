@@ -9,6 +9,8 @@
 
 
 ## Set up instructions
+1. fork and clone the repo
+1. run `bundle install`
 
 
 ## Endpoints
