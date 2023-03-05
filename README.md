@@ -7,7 +7,46 @@
 ## Set up instructions
 
 
-## Endpoint Use
+## Endpoints
+
+### Get recipes for a given country
+`GET /api/v1/recipes?country=<country name>`
+
+### Get learning resources for a given country
+`GET /api/v1/learning_resources?country=<country name>`
+
+### User registration
+```
+POST /api/v1/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "John Wick",
+  "email": "JohnWick@syndicate.com"
+}
+```
+
+### Add recipe to user favorite
+```
+POST /api/v1/favorites
+Content-Type: application/json
+Accept: application/json
+
+{
+    "api_key": "f7dd1e79c9292b34ccb1a69f7b84ecbc",
+    "country": "thailand",
+    "recipe_link": "https://www.tastingtable.com/.....",
+    "recipe_title": "Crab Fried Rice (Khaao Pad Bpu)"
+}
+```
+
+### Get a users favorites
+```
+GET /api/v1/favorites?api_key=7da41fb7382a5f875ca0cdba958e7eb6
+Content-Type: application/json
+Accept: application/json
+```
 
 ## Database design
 ![Users- name:string, email:string, api_key:string. Favorites- country:string, recipe_link:string, recipe_title:string, user_id:references](https://i.ibb.co/tqbNbh5/Screen-Shot-2023-03-05-at-10-55-20-AM.png "DB Diagram")
