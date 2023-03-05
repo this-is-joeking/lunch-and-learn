@@ -1,7 +1,11 @@
 # README
 
 ## Learning Goals
- - 
+- Expose an API that aggregates data from several external APIs
+- Expose an API that requires an authorization token
+- Test API consumption/exposure using webmock
+- Implement caching
+- Implement basic authentication using BCrypt
 
 
 ## Set up instructions
