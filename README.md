@@ -9,6 +9,8 @@
 
 ## Endpoint Use
 
+## Database design
+![Users- name:string, email:string, api_key:string. Favorites- country:string, recipe_link:string, recipe_title:string, user_id:references](https://i.ibb.co/tqbNbh5/Screen-Shot-2023-03-05-at-10-55-20-AM.png "DB Diagram")
 
 
 ## APIs used
