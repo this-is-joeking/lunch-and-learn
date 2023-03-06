@@ -1,6 +1,6 @@
 class VideoService
   def self.conn
-    Faraday.new(url: 'https://www.googleapis.com', params: { key: ENV['youtube_api_key']})
+    Faraday.new(url: 'https://www.googleapis.com', params: { key: ENV['YOUTUBE_API_KEY']})
   end
 
   def self.search(country)

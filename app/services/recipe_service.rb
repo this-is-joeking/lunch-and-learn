@@ -1,7 +1,7 @@
 class RecipeService
   def self.conn
     Faraday.new(url: 'https://api.edamam.com',
-                params: { app_id: ENV['recipe_app_id'], app_key: ENV['recipe_api_key'] })
+                params: { app_id: ENV['RECIPE_APP_ID'], app_key: ENV['RECIPE_API_KEY'] })
   end
 
   def self.by_country(country)
