@@ -33,7 +33,7 @@ RSpec.describe 'get learning resources by country' do
     end
   end
   
-  it 'returns an empty hash if there are no results for queried country' do
+  xit 'returns an empty hash if there are no results for queried country' do
     # TODO write test here
   end
 end
