@@ -1,4 +1,4 @@
-class SightsFacade
+class SightFacade
   def self.sights_near(lon, lat)
     sights_data = SightsService.sights_near(lon, lat)
     sights_data[:features].map do |sight_data|
