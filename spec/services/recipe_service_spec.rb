@@ -18,5 +18,4 @@ RSpec.describe RecipeService do
       end
     end
   end
-  
 end

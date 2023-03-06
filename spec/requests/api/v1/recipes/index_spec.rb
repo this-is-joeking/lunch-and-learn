@@ -7,7 +7,6 @@ RSpec.describe 'get recipes by country' do
     stub_request(:get, "https://api.edamam.com/api/recipes/v2?app_id=9c81b1a0&app_key=#{ENV['recipe_api_key']}&q=#{country}&type=any")
       .to_return(status: 200, body: File.read('spec/fixtures/recipes_italy.json'), headers: {})
 
-
     get "/api/v1/recipes?country=#{country}"
 
     recipe_data = JSON.parse(response.body, symbolize_names: true)
@@ -64,9 +63,7 @@ RSpec.describe 'get recipes by country' do
     expect(empty_response[:data]).to eq([])
   end
 
-  xit 'gets recipes for a random country if country param is missing' do
+  it 'gets recipes for a random country if country param is missing' do
     WebMock.disable_net_connect!(allow: 'https://restcountries.com')
-
-
   end
 end
