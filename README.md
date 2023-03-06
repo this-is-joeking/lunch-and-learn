@@ -64,3 +64,5 @@ No API key needed
 
 [Edamam Recipe API Documentation](https://developer.edamam.com/edamam-docs-recipe-api)
 Get your key [here](https://developer.edamam.com/edamam-recipe-api)
+
+![Edamam Logo](https://i.ibb.co/0fRzNsv/white.png)
