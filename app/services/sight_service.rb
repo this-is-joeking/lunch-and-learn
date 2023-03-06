@@ -1,4 +1,4 @@
-class SightsService
+class SightService
   def self.conn
     Faraday.new(url: 'https://api.geoapify.com',
                 params: { apiKey: ENV['places_api_key'] })
