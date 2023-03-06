@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe RecipeFacade do
-  describe '.by_country' do
+  describe '.by_country()' do
     it 'returns recipe objects for the given country' do
       country = 'italy'
 
