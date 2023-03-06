@@ -16,4 +16,20 @@ RSpec.describe CountryService do
       end
     end
   end
+
+  describe '.find()' do
+    it 'returns data for given country including coordinates of capital' do
+      stub_request(:get, "https://restcountries.com/v3.1/name/france")
+       .to_return(status: 200, body: File.read('spec/fixtures/find_france.json'))
+
+      country_details = CountryService.find('france')
+
+      expect(country_details).to be_a Array
+      expect(country_details.first).to have_key(:capitalInfo)
+      expect(country_details.first[:capitalInfo]).to have_key(:latlng)
+      expect(country_details.first[:capitalInfo][:latlng]).to be_a Array
+      expect(country_details.first[:capitalInfo][:latlng][0]).to be_a Float
+      expect(country_details.first[:capitalInfo][:latlng][1]).to be_a Float
+    end
+  end
 end
