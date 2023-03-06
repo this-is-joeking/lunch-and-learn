@@ -9,9 +9,6 @@ RSpec.describe 'Tourist sights' do
       stub_request(:get, "https://restcountries.com/v3.1/name/france")
         .to_return(status: 200, body: File.read('spec/fixtures/find_france.json'))
       
-      stub_request(:get, "https://restcountries.com/v3.1/capital/Paris")
-        .to_return(status: 200, body: File.read('spec/fixtures/paris_info.json'))
-      
       get '/api/v1/tourist_sights?country=france'
 
       sights_data = JSON.parse(response.body, symbolize_names: true)
