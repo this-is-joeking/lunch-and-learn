@@ -22,9 +22,9 @@ RSpec.describe 'get learning resources by country' do
     expect(learning_data[:data][:attributes]).to be_a Hash
     expect(learning_data[:data][:attributes].keys.sort).to eq([:country, :video, :images].sort)
     expect(learning_data[:data][:attributes][:country]).to eq(country)
-    expect(learning_data[:data][:attributes][:video].keys.sort).to eq([:title, :youtube_video_url].sort)
+    expect(learning_data[:data][:attributes][:video].keys.sort).to eq([:title, :youtube_video_id].sort)
     expect(learning_data[:data][:attributes][:video][:title]).to be_a String
-    expect(learning_data[:data][:attributes][:video][:youtube_video_url]).to be_a String
+    expect(learning_data[:data][:attributes][:video][:youtube_video_id]).to be_a String
     expect(learning_data[:data][:attributes][:images]).to be_a Array
     learning_data[:data][:attributes][:images].each do |img|
       expect(img.keys.sort).to eq([:alt_tag, :url].sort)
