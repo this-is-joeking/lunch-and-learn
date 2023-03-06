@@ -11,6 +11,5 @@ class CountryService
   def self.find(country)
     response = conn.get("/v3.1/name/#{country}")
     JSON.parse(response.body, symbolize_names: true)
-    require 'pry'; binding.pry
   end
 end

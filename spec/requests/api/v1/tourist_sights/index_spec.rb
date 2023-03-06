@@ -3,8 +3,15 @@ require 'rails_helper'
 RSpec.describe 'Tourist sights' do
   describe 'get /api/v1/tourist_sights?country=<country name>' do
     it 'returns a collection of tourist sights within 20,000 m of country capital' do
-      WebMock.allow_net_connect!
-
+      stub_request(:get, "https://api.geoapify.com/v2/places?apiKey=#{ENV['places_api_key']}&bias=proximity:2.33,48.87&categories=tourism.sights&filter=circle:2.33,48.87,20000")
+        .to_return(status: 200, body: File.read('spec/fixtures/paris_sights.json'))
+        
+      stub_request(:get, "https://restcountries.com/v3.1/name/france")
+        .to_return(status: 200, body: File.read('spec/fixtures/find_france.json'))
+      
+      stub_request(:get, "https://restcountries.com/v3.1/capital/Paris")
+        .to_return(status: 200, body: File.read('spec/fixtures/paris_info.json'))
+      
       get '/api/v1/tourist_sights?country=france'
 
       sights_data = JSON.parse(response.body, symbolize_names: true)
