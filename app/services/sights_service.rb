@@ -7,8 +7,7 @@ class SightsService
   def self.sights_near(lon, lat)
     response = conn.get("/v2/places", {
         categories: 'tourism.sights',
-        filter: "circle:#{lon},#{lat},20000",
-        bias: "proximity:#{lon},#{lat}"
+        filter: "circle:#{lon},#{lat},1000",
       })
     JSON.parse(response.body, symbolize_names: true)
   end
