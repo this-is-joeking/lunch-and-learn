@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe CountryService do
   describe '.all' do
     it 'gets all countries' do
-      stub_request(:get, "https://restcountries.com/v3.1/all")
-        .to_return(status: 200, body: File.read("spec/fixtures/all_countries.json"), headers: {})
+      stub_request(:get, 'https://restcountries.com/v3.1/all')
+        .to_return(status: 200, body: File.read('spec/fixtures/all_countries.json'), headers: {})
 
       response = CountryService.all
 
@@ -19,8 +19,8 @@ RSpec.describe CountryService do
 
   describe '.find()' do
     it 'returns data for given country including coordinates of capital' do
-      stub_request(:get, "https://restcountries.com/v3.1/name/france")
-       .to_return(status: 200, body: File.read('spec/fixtures/find_france.json'))
+      stub_request(:get, 'https://restcountries.com/v3.1/name/france')
+        .to_return(status: 200, body: File.read('spec/fixtures/find_france.json'))
 
       country_details = CountryService.find('france')
 

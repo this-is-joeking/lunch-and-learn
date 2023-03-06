@@ -6,9 +6,9 @@ RSpec.describe 'Tourist sights' do
       stub_request(:get, "https://api.geoapify.com/v2/places?apiKey=#{ENV['places_api_key']}&categories=tourism.sights&filter=circle:2.33,48.87,1000")
         .to_return(status: 200, body: File.read('spec/fixtures/paris_sights.json'))
 
-      stub_request(:get, "https://restcountries.com/v3.1/name/france")
+      stub_request(:get, 'https://restcountries.com/v3.1/name/france')
         .to_return(status: 200, body: File.read('spec/fixtures/find_france.json'))
-      
+
       get '/api/v1/tourist_sights?country=france'
 
       sights_data = JSON.parse(response.body, symbolize_names: true)
@@ -18,10 +18,10 @@ RSpec.describe 'Tourist sights' do
       expect(sights_data).to be_a Hash
       expect(sights_data.keys).to eq([:data])
       sights_data[:data].each do |sight|
-        expect(sight.keys.sort).to eq([:id, :type, :attributes].sort)
+        expect(sight.keys.sort).to eq(%i[id type attributes].sort)
         expect(sight[:id]).to eq(nil)
         expect(sight[:type]).to eq('tourist_sight')
-        expect(sight[:attributes].keys.sort).to eq([:name, :address, :place_id].sort)
+        expect(sight[:attributes].keys.sort).to eq(%i[name address place_id].sort)
         expect(sight[:attributes][:name]).to be_a String
         expect(sight[:attributes][:address]).to be_a String
         expect(sight[:attributes][:place_id]).to be_a String

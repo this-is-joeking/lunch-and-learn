@@ -4,7 +4,7 @@ RSpec.describe SightService do
   it 'returns an array of data needed to make TouristSite objects' do
     stub_request(:get, "https://api.geoapify.com/v2/places?apiKey=#{ENV['places_api_key']}&categories=tourism.sights&filter=circle:2.33,48.87,1000")
       .to_return(status: 200, body: File.read('spec/fixtures/paris_sights.json'))
-    
+
     sights_data = SightService.sights_near(2.33, 48.87)
 
     expect(sights_data).to be_a Hash
