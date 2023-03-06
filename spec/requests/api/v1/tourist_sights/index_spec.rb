@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Tourist sights' do
   describe 'get /api/v1/tourist_sights?country=<country name>' do
     it 'returns a collection of tourist sights within 20,000 m of country capital' do
+      WebMock.allow_net_connect!
 
       get '/api/v1/tourist_sights?country=france'
 
