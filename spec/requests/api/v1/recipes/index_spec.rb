@@ -2,11 +2,11 @@ require 'rails_helper'
 
 RSpec.describe 'get recipes by country' do
   it 'returns an array of recipes for the given country' do
-    country = "italy"
+    country = 'italy'
 
     stub_request(:get, "https://api.edamam.com/api/recipes/v2?app_id=9c81b1a0&app_key=#{ENV['recipe_api_key']}&q=#{country}&type=any")
       .to_return(status: 200, body: File.read('spec/fixtures/recipes_italy.json'), headers: {})
-    
+
 
     get "/api/v1/recipes?country=#{country}"
 
@@ -29,13 +29,13 @@ RSpec.describe 'get recipes by country' do
       expect(recipe[:attributes][:image]).to be_a String
     end
   end
-  
+
   it 'returns an empty array if country param is empty or no results' do
-    country = ""
+    country = ''
 
     stub_request(:get, "https://api.edamam.com/api/recipes/v2?app_id=9c81b1a0&app_key=#{ENV['recipe_api_key']}&q=#{country}&type=any")
       .to_return(status: 200, body: File.read('spec/fixtures/recipes_empty_query.json'), headers: {})
-    
+
     get "/api/v1/recipes?country=#{country}"
 
     empty_response = JSON.parse(response.body, symbolize_names: true)
@@ -48,7 +48,7 @@ RSpec.describe 'get recipes by country' do
   end
 
   it 'returns an empty array if there are no results' do
-    country = "Kyrgyzstan"
+    country = 'Kyrgyzstan'
 
     stub_request(:get, "https://api.edamam.com/api/recipes/v2?app_id=9c81b1a0&app_key=#{ENV['recipe_api_key']}&q=#{country}&type=any")
       .to_return(status: 200, body: File.read('spec/fixtures/recipes_kyrgyzstan.json'), headers: {})
