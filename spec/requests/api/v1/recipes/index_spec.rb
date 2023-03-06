@@ -65,6 +65,8 @@ RSpec.describe 'get recipes by country' do
   end
 
   xit 'gets recipes for a random country if country param is missing' do
+    WebMock.disable_net_connect!(allow: 'https://restcountries.com')
+
 
   end
 end
