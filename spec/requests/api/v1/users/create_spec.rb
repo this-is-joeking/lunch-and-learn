@@ -34,8 +34,20 @@ RSpec.describe 'creating a new user' do
     # TODO: once api key generation is place consider more thorough testing of the key value
   end
 
-  xit 'sends a error response if user with email already exists' do
+  it 'sends a error response if user with email already exists' do
+    user1 = create(:user)
+    name = 'john'
+    email = user1.email
 
+    headers = {
+      'CONTENT_TYPE' => 'application/json',
+      'ACCEPT' => 'application/json'
+    }
+    body = {
+      name: name,
+      email: email
+    }
+    post '/api/v1/users', headers: headers, params: body.to_json
 
     error_data = JSON.parse(response.body, symbolize_names: true)
 
@@ -45,6 +57,6 @@ RSpec.describe 'creating a new user' do
     expect(error_data.keys).to eq([:error])
     expect(error_data[:error].keys.sort).to eq([:code, :message])
     expect(error_data[:error][:code]).to eq(422)
-    expect(error_data[:error][:message]).to eq('Email already exists for another user')
+    expect(error_data[:error][:message]).to eq('Validation failed: Email has already been taken')
   end
 end
