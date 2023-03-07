@@ -75,6 +75,9 @@ Shoulda::Matchers.configure do |config|
 end
 
 VCR.configure do |config|
+  config.before_record do |i|
+    i.response.body.force_encoding('UTF-8')
+  end
   config.allow_http_connections_when_no_cassette = true
   config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   config.hook_into :webmock

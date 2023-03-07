@@ -18,7 +18,7 @@
     >YOUTUBE_API_KEY: <google api key>
     >PEXELS_API_KEY: <pexels api key>
     >```
- 5. run `rails s` to start the server on `http://localhost:3000/`
+1. run `rails s` to start the server on `http://localhost:3000/`
 
 _Note: if you are having an issue when running the server locally, but have passing tests you may want to delete the cassettes so you can test the actual API response_
 
