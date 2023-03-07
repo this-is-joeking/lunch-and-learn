@@ -12,12 +12,12 @@
 1. run `bundle install`
 1. run `bundle exec figaro install`
 1. Add api keys to `application.yml`
- ```
-RECIPE_APP_ID: <edamam app id>
-RECIPE_API_KEY: <edamam api key>
-YOUTUBE_API_KEY: <google api key>
-PEXELS_API_KEY: <pexels api key>
- ```
+    >```
+    >RECIPE_APP_ID: <edamam app id>
+    >RECIPE_API_KEY: <edamam api key>
+    >YOUTUBE_API_KEY: <google api key>
+    >PEXELS_API_KEY: <pexels api key>
+    >```
  5. run `rails s` to start the server on `http://localhost:3000/`
 
 _Note: if you are having an issue when running the server locally, but have passing tests you may want to delete the cassettes so you can test the actual API response_
