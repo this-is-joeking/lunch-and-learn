@@ -22,12 +22,12 @@ RSpec.describe 'creating a new user' do
     expect(new_user).to be_a Hash
     expect(new_user.keys).to eq([:data])
     expect(new_user[:data]).to be_a Hash
-    expect(new_user[:data].keys.sort).to eq([:type, :id, :attributes].sort)
+    expect(new_user[:data].keys.sort).to eq(%i[type id attributes].sort)
     expect(new_user[:data][:type]).to eq('user')
     expect(new_user[:data][:id]).to be_a String
     expect(new_user[:data][:id].to_i).to be_a Integer
     expect(new_user[:data][:attributes]).to be_a Hash
-    expect(new_user[:data][:attributes].keys.sort).to eq([:name, :email, :api_key].sort)
+    expect(new_user[:data][:attributes].keys.sort).to eq(%i[name email api_key].sort)
     expect(new_user[:data][:attributes][:name]).to eq(name)
     expect(new_user[:data][:attributes][:email]).to eq(email)
     expect(new_user[:data][:attributes][:api_key]).to be_a String
@@ -55,7 +55,7 @@ RSpec.describe 'creating a new user' do
     expect(response).to have_http_status(422)
     expect(error_data).to be_a Hash
     expect(error_data.keys).to eq([:error])
-    expect(error_data[:error].keys.sort).to eq([:code, :message])
+    expect(error_data[:error].keys.sort).to eq(%i[code message])
     expect(error_data[:error][:code]).to eq(422)
     expect(error_data[:error][:message]).to eq('Validation failed: Email has already been taken')
   end

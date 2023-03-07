@@ -7,11 +7,11 @@ class User < ApplicationRecord
 
   before_create :create_api_key
 
-  private 
+  private
 
   def create_api_key
     loop do
-      self.api_key = SecureRandom.urlsafe_base64(32).tr('-_','')
+      self.api_key = SecureRandom.urlsafe_base64(32).tr('-_', '')
       break unless User.find_by(api_key: self.api_key)
     end
   end

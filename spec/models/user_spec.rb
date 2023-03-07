@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User do
   describe 'relationships' do
-    it { should have_many :favorites}
+    it { should have_many :favorites }
   end
 
   describe 'validations' do
@@ -10,7 +10,7 @@ RSpec.describe User do
     it { should validate_uniqueness_of(:email).case_insensitive }
     it { should validate_presence_of :name }
   end
-  
+
   describe '#create_api_key' do
     it 'assigns the unique and random api key to the user' do
       user = User.create!(name: 'John', email: 'John@doe.com')
