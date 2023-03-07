@@ -17,11 +17,11 @@ RSpec.describe 'get recipes by country' do
     expect(recipe_data.keys).to eq([:data])
     expect(recipe_data[:data]).to be_an Array
     recipe_data[:data].each do |recipe|
-      expect(recipe.keys.sort).to eq([:id, :type, :attributes].sort)
+      expect(recipe.keys.sort).to eq(%i[id type attributes].sort)
       expect(recipe[:id]).to eq(nil)
       expect(recipe[:type]).to eq('recipe')
       expect(recipe[:attributes]).to be_a Hash
-      expect(recipe[:attributes].keys.sort).to eq([:title, :url, :country, :image].sort)
+      expect(recipe[:attributes].keys.sort).to eq(%i[title url country image].sort)
       expect(recipe[:attributes][:title]).to be_a String
       expect(recipe[:attributes][:url]).to be_a String
       expect(recipe[:attributes][:country]).to eq('italy')
@@ -80,15 +80,15 @@ RSpec.describe 'get recipes by country' do
     expect(recipe_data.keys).to eq([:data])
     expect(recipe_data[:data]).to be_an Array
     recipe_data[:data].each do |recipe|
-      expect(recipe.keys.sort).to eq([:id, :type, :attributes].sort)
+      expect(recipe.keys.sort).to eq(%i[id type attributes].sort)
       expect(recipe[:id]).to eq(nil)
       expect(recipe[:type]).to eq('recipe')
       expect(recipe[:attributes]).to be_a Hash
-      expect(recipe[:attributes].keys.sort).to eq([:title, :url, :country, :image].sort)
+      expect(recipe[:attributes].keys.sort).to eq(%i[title url country image].sort)
       expect(recipe[:attributes][:title]).to be_a String
       expect(recipe[:attributes][:url]).to be_a String
       expect(recipe[:attributes][:country]).to eq('italy')
       expect(recipe[:attributes][:image]).to be_a String
-    end  
+    end
   end
 end
