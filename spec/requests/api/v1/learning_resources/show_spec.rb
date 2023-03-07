@@ -4,9 +4,21 @@ RSpec.describe 'get learning resources by country' do
   it 'returns a hash of learning resources for the country with a video and 10 images' do
     country = 'guatemala'
     
-    WebMock.allow_net_connect!
+    # WebMock.allow_net_connect!
     # TODO Stub here
+    stub_request(:get, "https://www.googleapis.com/youtube/v3/search?channelId=UCluQ5yInbeAkkeCndNnUhpw&key=#{ENV['YOUTUBE_API_KEY']}&maxResults=1&part=snippet&q=guatemala&type=video")
+      .to_return(status: 200, body: File.read('spec/fixtures/youtube_guatemala.json'), headers: {})
 
+      stub_request(:get, "https://api.pexels.com/v1/search?per_page=10&query=guatemala").
+        with(
+          headers: {
+        'Accept'=>'*/*',
+        'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+        'Authorization'=>ENV['PEXELS_API_KEY'],
+        'User-Agent'=>'Faraday v2.7.4'
+          }).
+        to_return(status: 200, body: File.read('spec/fixtures/pexel_guatemala.json'), headers: {})    
+        
     get "/api/v1/learning_resources?country=#{country}"
 
     learning_data = JSON.parse(response.body, symbolize_names: true)
