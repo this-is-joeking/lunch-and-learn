@@ -11,14 +11,9 @@ class LearningResource
   def images
     @images_data.map do |image_data|
       {
-        alt_tag: extract_alt_text(image_data[:url]),
+        alt_tag: image_data[:alt],
         url: image_data[:src][:original]
       }
     end
-  end
-
-  def extract_alt_text(url)
-    alt_text = url.split('/').last # gets only the end of the URL
-    alt_text.gsub(/\d+$/, '') # removes the # at end of the url
   end
 end

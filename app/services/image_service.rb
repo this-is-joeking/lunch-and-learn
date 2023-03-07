@@ -1,7 +1,10 @@
 class ImageService
+  def self.conn
+    Faraday.new(url: 'https://api.pexels.com', headers: { 'Authorization' => ENV['PEXELS_API_KEY'] })
+  end
   def self.search(query)
-    client = Pexels::Client.new
-    response = client.photos.search(query, per_page: 10)
-    JSON.parse(response.to_json, symbolize_names: true)
+    response = conn.get('/v1/search', { query: query, per_page: 10 })
+    
+    JSON.parse(response.body, symbolize_names: true)
   end
 end
