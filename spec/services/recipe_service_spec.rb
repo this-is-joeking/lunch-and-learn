@@ -1,11 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe RecipeService do
-  describe '.by_country()' do
+  describe '.by_country()', :vcr do
     it 'returns an array of results matching the queried country' do
-      stub_request(:get, "https://api.edamam.com/api/recipes/v2?app_id=9c81b1a0&app_key=#{ENV['RECIPE_API_KEY']}&q=italy&type=any")
-        .to_return(status: 200, body: File.read('spec/fixtures/recipes_italy.json'), headers: {})
-
       response = RecipeService.by_country('italy')
 
       expect(response).to have_key(:hits)

@@ -3,14 +3,24 @@
 ## Learning Goals
 - Expose an API that aggregates data from several external APIs
 - Expose an API that requires an authorization token
-- Test API consumption/exposure using webmock
-- Implement caching
+- Test API consumption/exposure using VCR
 - Implement basic authentication using BCrypt
 
 
 ## Set up instructions
 1. fork and clone the repo
 1. run `bundle install`
+1. run `bundle exec figaro install`
+1. Add api keys to `application.yml`
+ ```
+RECIPE_APP_ID: <edamam app id>
+RECIPE_API_KEY: <edamam api key>
+YOUTUBE_API_KEY: <google api key>
+PEXELS_API_KEY: <pexels api key>
+ ```
+ 5. run `rails s` to start the server on `http://localhost:3000/`
+
+_Note: if you are having an issue when running the server locally, but have passing tests you may want to delete the cassettes so you can test the actual API response_
 
 
 ## Endpoints

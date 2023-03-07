@@ -1,11 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe VideoService do
-  describe '.search()' do
+  describe '.search()', :vcr do
     it 'returns a video by Mr.History with a title' do
-      stub_request(:get, "https://www.googleapis.com/youtube/v3/search?channelId=UCluQ5yInbeAkkeCndNnUhpw&key=#{ENV['YOUTUBE_API_KEY']}&maxResults=1&part=snippet&q=guatemala&type=video")
-        .to_return(status: 200, body: File.read('spec/fixtures/youtube_guatemala.json'), headers: {})
-
       response = VideoService.search('guatemala')
 
       expect(response).to have_key(:items)

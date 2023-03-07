@@ -44,6 +44,7 @@ group :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'webmock'
+  gem 'vcr'
   gem 'simplecov', require: false
   gem 'shoulda-matchers', '~> 5.0'
 end
