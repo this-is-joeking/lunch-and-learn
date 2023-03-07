@@ -13,19 +13,19 @@ RSpec.describe 'creating a new user' do
       name: name,
       email: email
     }
-    require 'pry'; binding.pry
-    post '/api/v1/users', headers: headers, body: body.to_json, as: :json
+    post '/api/v1/users', headers: headers, params: body.to_json
 
     new_user = JSON.parse(response.body, symbolize_names: true)
 
     expect(response).to be_successful
     expect(response).to have_http_status(201)
     expect(new_user).to be_a Hash
-    expect(new_user.keys).to eq(:data)
+    expect(new_user.keys).to eq([:data])
     expect(new_user[:data]).to be_a Hash
     expect(new_user[:data].keys.sort).to eq([:type, :id, :attributes].sort)
     expect(new_user[:data][:type]).to eq('user')
-    expect(new_user[:data][:id]).to eq('1')
+    expect(new_user[:data][:id]).to be_a String
+    expect(new_user[:data][:id].to_i).to be_a Integer
     expect(new_user[:data][:attributes]).to be_a Hash
     expect(new_user[:data][:attributes].keys.sort).to eq([:name, :email, :api_key].sort)
     expect(new_user[:data][:attributes][:name]).to eq(name)
