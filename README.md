@@ -16,14 +16,17 @@
 ## Endpoints
 
 ### Get recipes for a given country
-`GET /api/v1/recipes?country=<country name>`
+`GET '/api/v1/recipes?country=<country name>'`
+
+### Get recipes for a random country
+`GET '/api/v1/recipes'`
 
 ### Get learning resources for a given country
-`GET /api/v1/learning_resources?country=<country name>`
+`GET '/api/v1/learning_resources?country=<country name>'`
 
 ### User registration
 ```
-POST /api/v1/users
+POST '/api/v1/users'
 Content-Type: application/json
 Accept: application/json
 
@@ -35,7 +38,7 @@ Accept: application/json
 
 ### Add recipe to user favorite
 ```
-POST /api/v1/favorites
+POST '/api/v1/favorites'
 Content-Type: application/json
 Accept: application/json
 
@@ -49,7 +52,7 @@ Accept: application/json
 
 ### Get a users favorites
 ```
-GET /api/v1/favorites?api_key=7da41fb7382a5f875ca0cdba958e7eb6
+GET '/api/v1/favorites?api_key=7da41fb7382a5f875ca0cdba958e7eb6'
 Content-Type: application/json
 Accept: application/json
 ```
