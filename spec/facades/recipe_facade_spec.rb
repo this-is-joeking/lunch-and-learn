@@ -1,12 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe RecipeFacade do
-  describe '.by_country()' do
+  describe '.by_country()', :vcr do
     it 'returns recipe objects for the given country' do
       country = 'italy'
-
-      stub_request(:get, "https://api.edamam.com/api/recipes/v2?app_id=9c81b1a0&app_key=#{ENV['RECIPE_API_KEY']}&q=#{country}&type=any")
-        .to_return(status: 200, body: File.read('spec/fixtures/recipes_italy.json'), headers: {})
 
       recipes = RecipeFacade.by_country(country)
 

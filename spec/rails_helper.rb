@@ -73,3 +73,15 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
+
+VCR.configure do |config|
+  config.allow_http_connections_when_no_cassette = true
+  config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  config.hook_into :webmock
+  config.filter_sensitive_data('<RECIPE_APP_ID>') { ENV['RECIPE_APP_ID'] }
+  config.filter_sensitive_data('<RECIPE_API_KEY>') { ENV['RECIPE_API_KEY'] }
+  config.filter_sensitive_data('<PLACES_API_KEY>') { ENV['PLACES_API_KEY'] }
+  config.filter_sensitive_data('<YOUTUBE_API_KEY>') { ENV['YOUTUBE_API_KEY'] }
+  config.filter_sensitive_data('<PEXELS_API_KEY>') { ENV['PEXELS_API_KEY'] }
+  config.configure_rspec_metadata!
+end

@@ -3,8 +3,7 @@
 ## Learning Goals
 - Expose an API that aggregates data from several external APIs
 - Expose an API that requires an authorization token
-- Test API consumption/exposure using webmock
-- Implement caching
+- Test API consumption/exposure using VCR
 - Implement basic authentication using BCrypt
 
 

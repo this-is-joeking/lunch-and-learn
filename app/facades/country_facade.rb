@@ -4,7 +4,7 @@ class CountryFacade
     countries_data[random_num(countries_data.count)][:name][:common]
   end
 
-  private
+  private_class_method
 
   def self.random_num(max)
     rand(1..max)

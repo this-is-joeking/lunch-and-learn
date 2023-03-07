@@ -1,5 +1,5 @@
 class LearningResource
-  attr_reader :id, :country, :video
+  attr_reader :id, :country
 
   def initialize(images_data, video_data, country)
     @id          = nil

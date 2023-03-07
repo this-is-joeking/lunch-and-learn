@@ -1,0 +1,163 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?channelId=UCluQ5yInbeAkkeCndNnUhpw&key=<YOUTUBE_API_KEY>&maxResults=1&part=snippet&q=nauru&type=video
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Tue, 07 Mar 2023 16:16:57 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "T4jDtYx1dwcrEUkczINxHWtZa_8",
+          "nextPageToken": "CAEQAA",
+          "regionCode": "US",
+          "pageInfo": {
+            "totalResults": 15,
+            "resultsPerPage": 1
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "6BU_ZsMEdu4mejOa2gt4-soqXE8",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "SyNZ5q0LIz0"
+              },
+              "snippet": {
+                "publishedAt": "2022-05-22T01:57:03Z",
+                "channelId": "UCluQ5yInbeAkkeCndNnUhpw",
+                "title": "A Super Quick History of Nauru",
+                "description": "Pictures Requiring Attribution: Tyk: https://en.wikipedia.org/wiki/File:Languages_of_Micronesia.en.svg Obsidian Soul: ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/SyNZ5q0LIz0/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/SyNZ5q0LIz0/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/SyNZ5q0LIz0/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Mr History",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-05-22T01:57:03Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Tue, 07 Mar 2023 16:16:57 GMT
+- request:
+    method: get
+    uri: https://api.pexels.com/v1/search?per_page=10&query=nauru
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - "<PEXELS_API_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 07 Mar 2023 16:16:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7a442559af45a70c-PHX
+      Access-Control-Allow-Origin:
+      - "*"
+      Age:
+      - '45313'
+      Cache-Control:
+      - max-age=86400
+      Etag:
+      - W/"5cb3585f53d361d87a93bc28342a022b"
+      Expires:
+      - Wed, 08 Mar 2023 16:16:57 GMT
+      Cf-Cache-Status:
+      - HIT
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ratelimit-Limit:
+      - '25000'
+      X-Ratelimit-Remaining:
+      - '24942'
+      X-Ratelimit-Reset:
+      - '1680736644'
+      X-Request-Id:
+      - 677e0adc-be4c-43bb-b3b4-af5c4e55015c
+      X-Runtime:
+      - '0.020357'
+      X-Server:
+      - bulldog
+      Set-Cookie:
+      - __cf_bm=.lC1SGCoYI6VPJ2MiBYnl5n.F6AOPK75GsFPql099gE-1678205817-0-AaVMuP498FB/rsynTipaT0NjOJ0/oWMZ9cz+7g5qxiRRBpyQ5AMRwVFqsNUswZg0q2/8YAv7FapCfWuMs6RDhSk=;
+        path=/; expires=Tue, 07-Mar-23 16:46:57 GMT; domain=.pexels.com; HttpOnly;
+        Secure; SameSite=None
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"page":1,"per_page":10,"photos":[],"total_results":0}'
+  recorded_at: Tue, 07 Mar 2023 16:16:57 GMT
+recorded_with: VCR 6.1.0
