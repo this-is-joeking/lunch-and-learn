@@ -55,7 +55,7 @@ RSpec.describe 'get recipes by country', :vcr do
   end
 
   it 'gets recipes for a random country if country param is missing' do
-    allow(CountryFacade).to receive(:random).and_return('italy')
+    allow(RecipeFacade).to receive(:random_country).and_return('italy')
 
     get '/api/v1/recipes'
 

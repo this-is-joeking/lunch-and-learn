@@ -13,4 +13,18 @@ RSpec.describe RecipeFacade do
       end
     end
   end
+
+  describe '.random_country', :vcr do
+    it 'returns a string of a random country' do
+      country1 = RecipeFacade.random_country
+
+      expect(country1).to be_a String
+
+      allow(RecipeFacade).to receive(:random_num).and_return(0)
+
+      country2 = RecipeFacade.random_country
+
+      expect(country2).to eq('Niue')
+    end
+  end
 end
