@@ -3,8 +3,7 @@ class LearningResource
   def initialize(images_data, video_data, country)
     @id = nil
     @country = country
-    @video = { title: video_data[:snippet][:title], 
-               youtube_video_id: video_data[:id][:videoId] }
+    @video_data = video_data
     @images_data = images_data
   end
 
@@ -14,6 +13,15 @@ class LearningResource
         alt_tag: image_data[:alt],
         url: image_data[:src][:original]
       }
+    end
+  end
+
+  def video
+    if @video_data
+      { title: @video_data[:snippet][:title], 
+        youtube_video_id: @video_data[:id][:videoId] }
+    else
+      {}
     end
   end
 end

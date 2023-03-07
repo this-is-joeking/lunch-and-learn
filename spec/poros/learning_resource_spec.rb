@@ -29,8 +29,6 @@ RSpec.describe LearningResource do
     expect(@learning_resource).to be_a LearningResource
     expect(@learning_resource.id).to eq(nil)
     expect(@learning_resource.country).to eq(@country)
-    expect(@learning_resource.video[:title]).to eq('A Super Quick History of Guatemala')
-    expect(@learning_resource.video[:youtube_video_id]).to eq('Gl1TY5hQO78')
   end
 
   describe '#images' do
@@ -43,6 +41,26 @@ RSpec.describe LearningResource do
       end
       expect(images[0][:alt_tag]).to eq('Aerial View of a City')
       expect(images[0][:url]).to eq('https://images.pexels.com/photos/335887/pexels-photo-335887.jpeg')
+    end
+
+    it 'returns an empty array if there are no images' do
+      lr = LearningResource.new([], @video, @country)
+
+      expect(lr.images).to eq([])
+    end
+  end
+
+  describe '#video' do
+    it 'returns video data if video data is present' do
+      expect(@learning_resource.video.keys.sort).to eq([:title, :youtube_video_id].sort)
+      expect(@learning_resource.video[:title]).to eq('A Super Quick History of Guatemala')
+      expect(@learning_resource.video[:youtube_video_id]).to eq('Gl1TY5hQO78')
+    end
+
+    it 'returns an empty hash if there is no video data' do
+      lr = LearningResource.new(@images, nil, @country)
+
+      expect(lr.video).to eq({})
     end
   end
 end
