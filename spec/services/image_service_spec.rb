@@ -13,7 +13,7 @@ RSpec.describe ImageService do
           }
         )
         .to_return(status: 200, body: File.read('spec/fixtures/pexel_guatemala.json'), headers: {})
-      
+
       response = ImageService.search('guatemala')
 
       expect(response).to have_key(:photos)

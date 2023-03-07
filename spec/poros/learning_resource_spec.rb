@@ -52,7 +52,7 @@ RSpec.describe LearningResource do
 
   describe '#video' do
     it 'returns video data if video data is present' do
-      expect(@learning_resource.video.keys.sort).to eq([:title, :youtube_video_id].sort)
+      expect(@learning_resource.video.keys.sort).to eq(%i[title youtube_video_id].sort)
       expect(@learning_resource.video[:title]).to eq('A Super Quick History of Guatemala')
       expect(@learning_resource.video[:youtube_video_id]).to eq('Gl1TY5hQO78')
     end

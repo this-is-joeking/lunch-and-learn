@@ -46,7 +46,7 @@ RSpec.describe 'get learning resources by country' do
 
   it 'returns an empty array for images if there are no image resutls' do
     WebMock.allow_net_connect!
-    
+
     country = 'nauru'
 
     get "/api/v1/learning_resources?country=#{country}"
@@ -97,6 +97,5 @@ RSpec.describe 'get learning resources by country' do
       expect(img[:alt_tag]).to be_a String
       expect(img[:url]).to be_a String
     end
-
   end
 end

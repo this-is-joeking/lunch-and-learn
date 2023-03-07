@@ -1,9 +1,10 @@
 class LearningResource
   attr_reader :id, :country, :video
+
   def initialize(images_data, video_data, country)
-    @id = nil
-    @country = country
-    @video_data = video_data
+    @id          = nil
+    @country     = country
+    @video_data  = video_data
     @images_data = images_data
   end
 
@@ -18,7 +19,7 @@ class LearningResource
 
   def video
     if @video_data
-      { title: @video_data[:snippet][:title], 
+      { title: @video_data[:snippet][:title],
         youtube_video_id: @video_data[:id][:videoId] }
     else
       {}
