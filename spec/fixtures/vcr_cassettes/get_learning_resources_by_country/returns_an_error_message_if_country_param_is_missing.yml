@@ -1,0 +1,157 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?channelId=UCluQ5yInbeAkkeCndNnUhpw&key=<YOUTUBE_API_KEY>&maxResults=1&part=snippet&q&type=video
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Wed, 08 Mar 2023 03:46:55 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "314AlInTijdPJ-VeiM6n7kCQbbU",
+          "nextPageToken": "CAEQAA",
+          "regionCode": "US",
+          "pageInfo": {
+            "totalResults": 155,
+            "resultsPerPage": 1
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "BA5TINd2rpzew9QS8f1YVa8SiZs",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "65e09vsw3nE"
+              },
+              "snippet": {
+                "publishedAt": "2022-03-31T22:54:28Z",
+                "channelId": "UCluQ5yInbeAkkeCndNnUhpw",
+                "title": "A Super Quick History of Montenegro",
+                "description": "Pictures Requiring Attribution: Trolvag: https://commons.wikimedia.org/wiki/File:Lovcen_-_panoramio.jpg MaryroseB54: ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/65e09vsw3nE/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/65e09vsw3nE/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/65e09vsw3nE/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Mr History",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-03-31T22:54:28Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Wed, 08 Mar 2023 03:46:55 GMT
+- request:
+    method: get
+    uri: https://api.pexels.com/v1/search?per_page=10&query
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - "<PEXELS_API_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Wed, 08 Mar 2023 03:46:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7a481808fb682eae-LAX
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=86400
+      Cf-Cache-Status:
+      - MISS
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ratelimit-Limit:
+      - '25000'
+      X-Ratelimit-Remaining:
+      - '24917'
+      X-Ratelimit-Reset:
+      - '1680736644'
+      X-Request-Id:
+      - b450877c-0d40-4bd4-9fb3-d55f06647969
+      X-Runtime:
+      - '0.003821'
+      X-Server:
+      - chameleon
+      Set-Cookie:
+      - __cf_bm=2VUxNM3hfGladLmE6BisoSYWtZRej31NX1ddfgtrB4g-1678247215-0-AYepoRVXquWK4ws1hpc6Ep2hlzQBQdym5L4cY2c20Qt+zfkDpvPq0JwCA80PD30FGnibZWz5xdRNv2JYC+TyxLA=;
+        path=/; expires=Wed, 08-Mar-23 04:16:55 GMT; domain=.pexels.com; HttpOnly;
+        Secure; SameSite=None
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"status":400,"code":"No query param given"}'
+  recorded_at: Wed, 08 Mar 2023 03:46:55 GMT
+recorded_with: VCR 6.1.0

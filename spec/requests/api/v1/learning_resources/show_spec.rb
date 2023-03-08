@@ -80,4 +80,35 @@ RSpec.describe 'get learning resources by country', :vcr do
       expect(img[:url]).to be_a String
     end
   end
+
+  xit 'returns an error message if country param is not a country' do
+    # TODO validate that a country param is a country
+    country = 'asdfasdf'
+
+    get "/api/v1/learning_resources?country=#{country}"
+
+    error_message = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response).to_not be_successful
+    expect(response).to have_http_status(400)
+    expect(error_message).to be_a Hash
+    expect(error_message.keys).to eq([:error])
+    expect(error_message[:error].keys.sort).to eq(%i[code message].sort)
+    expect(error_message[:error][:code]).to eq(400)
+    expect(error_message[:error][:message]).to eq('Invalid request, no value for country param given')
+  end
+
+  it 'returns an error message if country param is missing' do
+    get "/api/v1/learning_resources"
+
+    error_message = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response).to_not be_successful
+    expect(response).to have_http_status(400)
+    expect(error_message).to be_a Hash
+    expect(error_message.keys).to eq([:error])
+    expect(error_message[:error].keys.sort).to eq(%i[code message].sort)
+    expect(error_message[:error][:code]).to eq(400)
+    expect(error_message[:error][:message]).to eq('Invalid request, no country param given')
+  end
 end

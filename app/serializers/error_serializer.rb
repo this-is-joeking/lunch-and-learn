@@ -16,4 +16,13 @@ class ErrorSerializer
       }
     }
   end
+
+  def self.missing_param(param)
+    {
+      "error": {
+        "code": 400,
+        "message": "Invalid request, no #{param} param given"
+      }
+    }
+  end
 end
