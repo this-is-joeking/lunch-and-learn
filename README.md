@@ -3,9 +3,9 @@
 ## Learning Goals
 - Expose an API that aggregates data from several external APIs
 - Expose an API that requires an authorization token
-- Test API consumption/exposure using VCR
-- Implement basic authentication using BCrypt
-
+- Expose an API for CRUD functionality
+- Determine completion criteria based on the needs of other developers
+- Test API consumption/exposure using VCR and Webmock
 
 ## Set up instructions
 1. fork and clone the repo

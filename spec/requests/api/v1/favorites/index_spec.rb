@@ -27,6 +27,7 @@ RSpec.describe 'list all of a users favorites' do
       expect(favorite_data.keys.sort).to eq(%i[id type attributes].sort)
       expect(favorite_data[:id]).to be_a String
       expect(favorite_data[:id].to_i).to be_a Integer
+      expect(Favorite.find(favorite_data[:id].to_i)).to_not be(nil)
       expect(favorite_data[:type]).to eq('favorite')
       expect(favorite_data[:attributes]).to be_a Hash
       expect(favorite_data[:attributes].keys.sort).to eq(%i[recipe_title recipe_link country created_at].sort)
