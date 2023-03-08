@@ -31,6 +31,9 @@ RSpec.describe 'creating a new user' do
     expect(new_user[:data][:attributes][:name]).to eq(name)
     expect(new_user[:data][:attributes][:email]).to eq(email)
     expect(new_user[:data][:attributes][:api_key]).to be_a String
+    expect(User.last.name).to eq(name)
+    expect(User.last.email).to eq(email)
+    expect(User.last.api_key).to eq(new_user[:data][:attributes][:api_key])
   end
 
   it 'sends a error response if user with email already exists' do

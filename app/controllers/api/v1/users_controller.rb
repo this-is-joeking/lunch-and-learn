@@ -1,7 +1,7 @@
 module Api
   module V1
     class UsersController < ApplicationController
-    rescue_from ActiveRecord::RecordInvalid, with: :render_error
+      rescue_from ActiveRecord::RecordInvalid, with: :render_error
 
       def create
         user = User.create!(user_params)

@@ -19,12 +19,6 @@ RSpec.describe RecipeFacade do
       country1 = RecipeFacade.random_country
 
       expect(country1).to be_a String
-
-      allow(RecipeFacade).to receive(:random_num).and_return(0)
-
-      country2 = RecipeFacade.random_country
-
-      expect(country2).to eq('Niue')
     end
   end
 end

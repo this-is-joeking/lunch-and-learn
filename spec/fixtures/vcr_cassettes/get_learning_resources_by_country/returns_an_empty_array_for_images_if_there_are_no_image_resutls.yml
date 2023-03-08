@@ -25,7 +25,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Tue, 07 Mar 2023 16:16:57 GMT
+      - Tue, 07 Mar 2023 22:50:48 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -41,7 +41,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: |
         {
           "kind": "youtube#searchListResponse",
@@ -89,7 +89,7 @@ http_interactions:
             }
           ]
         }
-  recorded_at: Tue, 07 Mar 2023 16:16:57 GMT
+  recorded_at: Tue, 07 Mar 2023 22:50:48 GMT
 - request:
     method: get
     uri: https://api.pexels.com/v1/search?per_page=10&query=nauru
@@ -111,7 +111,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 07 Mar 2023 16:16:57 GMT
+      - Tue, 07 Mar 2023 22:50:48 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -119,17 +119,15 @@ http_interactions:
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7a442559af45a70c-PHX
+      - 7a4666452c5431cd-LAX
       Access-Control-Allow-Origin:
       - "*"
-      Age:
-      - '45313'
       Cache-Control:
       - max-age=86400
       Etag:
       - W/"5cb3585f53d361d87a93bc28342a022b"
       Expires:
-      - Wed, 08 Mar 2023 16:16:57 GMT
+      - Wed, 08 Mar 2023 22:50:48 GMT
       Cf-Cache-Status:
       - HIT
       X-Frame-Options:
@@ -137,7 +135,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '25000'
       X-Ratelimit-Remaining:
-      - '24942'
+      - '24932'
       X-Ratelimit-Reset:
       - '1680736644'
       X-Request-Id:
@@ -147,8 +145,8 @@ http_interactions:
       X-Server:
       - bulldog
       Set-Cookie:
-      - __cf_bm=.lC1SGCoYI6VPJ2MiBYnl5n.F6AOPK75GsFPql099gE-1678205817-0-AaVMuP498FB/rsynTipaT0NjOJ0/oWMZ9cz+7g5qxiRRBpyQ5AMRwVFqsNUswZg0q2/8YAv7FapCfWuMs6RDhSk=;
-        path=/; expires=Tue, 07-Mar-23 16:46:57 GMT; domain=.pexels.com; HttpOnly;
+      - __cf_bm=osFp2EoePAQF2ebJnp_5rCJCuSFU32ZfwFuyWC8.nPA-1678229448-0-ARfvl4/H+pkhI6kTLhxFJkkW6OJce+I3gDtvbvypj6Z8qPdvGQfNjQrQAkmaVhPYaY1zRUoPsr1UyG24CZE50ng=;
+        path=/; expires=Tue, 07-Mar-23 23:20:48 GMT; domain=.pexels.com; HttpOnly;
         Secure; SameSite=None
       Vary:
       - Accept-Encoding
@@ -157,7 +155,7 @@ http_interactions:
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: '{"page":1,"per_page":10,"photos":[],"total_results":0}'
-  recorded_at: Tue, 07 Mar 2023 16:16:57 GMT
+  recorded_at: Tue, 07 Mar 2023 22:50:48 GMT
 recorded_with: VCR 6.1.0
