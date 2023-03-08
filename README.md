@@ -92,4 +92,5 @@ Next steps for this API  include
 1. Adding an endpoint for users to delete a favorite
 1. Implementing authentication with login functionality using BCrypt
 1. Encrypting the API key so it is not stored as plain text in the database
+1. Refactor country validation to return closest match when possible
 
