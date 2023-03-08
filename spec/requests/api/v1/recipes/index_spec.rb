@@ -54,6 +54,22 @@ RSpec.describe 'get recipes by country', :vcr do
     expect(empty_response[:data]).to eq([])
   end
 
+  it 'returns an error if the country value is not a country' do
+    country = 'NotACountry'
+
+    get "/api/v1/recipes?country=#{country}"
+
+    error_message = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response).to_not be_successful
+    expect(response).to have_http_status(400)
+    expect(error_message).to be_a Hash
+    expect(error_message.keys).to eq([:error])
+    expect(error_message[:error].keys.sort).to eq(%i[code message].sort)
+    expect(error_message[:error][:code]).to eq(400)
+    expect(error_message[:error][:message]).to eq("Invalid request, #{country} is not a country in our system")
+  end
+
   it 'gets recipes for a random country if country param is missing' do
     allow(RecipeFacade).to receive(:random_country).and_return('italy')
 
