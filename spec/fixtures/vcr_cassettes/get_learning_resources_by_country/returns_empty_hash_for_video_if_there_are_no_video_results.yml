@@ -2,6 +2,58 @@
 http_interactions:
 - request:
     method: get
+    uri: https://restcountries.com/v3.1/name/suriname?fullText=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 08 Mar 2023 04:48:10 GMT
+      Server:
+      - Apache/2.4.38 (Debian)
+      Cache-Control:
+      - public, immutable, max-age=31556926
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1278'
+    body:
+      encoding: UTF-8
+      string: '[{"name":{"common":"Suriname","official":"Republic of Suriname","nativeName":{"nld":{"official":"Republiek
+        Suriname","common":"Suriname"}}},"tld":[".sr"],"cca2":"SR","ccn3":"740","cca3":"SUR","cioc":"SUR","independent":true,"status":"officially-assigned","unMember":true,"currencies":{"SRD":{"name":"Surinamese
+        dollar","symbol":"$"}},"idd":{"root":"+5","suffixes":["97"]},"capital":["Paramaribo"],"altSpellings":["SR","Sarnam","Sranangron","Republic
+        of Suriname","Republiek Suriname"],"region":"Americas","subregion":"South
+        America","languages":{"nld":"Dutch"},"translations":{"ara":{"official":"جمهورية
+        سورينام","common":"سورينام"},"bre":{"official":"Republik Surinam","common":"Surinam"},"ces":{"official":"Republika
+        Surinam","common":"Surinam"},"cym":{"official":"Republic of Suriname","common":"Suriname"},"deu":{"official":"Republik
+        Suriname","common":"Suriname"},"est":{"official":"Suriname Vabariik","common":"Suriname"},"fin":{"official":"Surinamen
+        tasavalta","common":"Suriname"},"fra":{"official":"République du Suriname","common":"Surinam"},"hrv":{"official":"Republika
+        Surinam","common":"Surinam"},"hun":{"official":"Suriname Köztársaság","common":"Suriname"},"ita":{"official":"Repubblica
+        del Suriname","common":"Suriname"},"jpn":{"official":"スリナム共和国","common":"スリナム"},"kor":{"official":"수리남
+        공화국","common":"수리남"},"nld":{"official":"Republiek Suriname","common":"Suriname"},"per":{"official":"جمهوری
+        سورینام","common":"سورینام"},"pol":{"official":"Republika Surinamu","common":"Surinam"},"por":{"official":"República
+        do Suriname","common":"Suriname"},"rus":{"official":"Республика Суринам","common":"Суринам"},"slk":{"official":"Surinamská
+        republika","common":"Surinam"},"spa":{"official":"República de Suriname","common":"Surinam"},"srp":{"official":"Република
+        Суринам","common":"Суринам"},"swe":{"official":"Republiken Surinam","common":"Surinam"},"tur":{"official":"Surinam
+        Cumhuriyeti","common":"Surinam"},"urd":{"official":"جمہوریہ سرینام","common":"سرینام"},"zho":{"official":"苏里南共和国","common":"苏里南"}},"latlng":[4.0,-56.0],"landlocked":false,"borders":["BRA","GUF","GUY"],"area":163820.0,"demonyms":{"eng":{"f":"Surinamer","m":"Surinamer"},"fra":{"f":"Surinamaise","m":"Surinamais"}},"flag":"\uD83C\uDDF8\uD83C\uDDF7","maps":{"googleMaps":"https://goo.gl/maps/iy7TuQLSi4qgoBoG7","openStreetMaps":"https://www.openstreetmap.org/relation/287082"},"population":586634,"gini":{"1999":57.9},"fifa":"SUR","car":{"signs":["SME"],"side":"left"},"timezones":["UTC-03:00"],"continents":["South
+        America"],"flags":{"png":"https://flagcdn.com/w320/sr.png","svg":"https://flagcdn.com/sr.svg","alt":"The
+        flag of Suriname is composed of five horizontal bands of green, white, red,
+        white and green in the ratio of 2:1:4:1:2. A large five-pointed yellow star
+        is centered in the red band."},"coatOfArms":{"png":"https://mainfacts.com/media/images/coats_of_arms/sr.png","svg":"https://mainfacts.com/media/images/coats_of_arms/sr.svg"},"startOfWeek":"monday","capitalInfo":{"latlng":[5.83,-55.17]}}]'
+  recorded_at: Wed, 08 Mar 2023 04:48:10 GMT
+- request:
+    method: get
     uri: https://www.googleapis.com/youtube/v3/search?channelId=UCluQ5yInbeAkkeCndNnUhpw&key=<YOUTUBE_API_KEY>&maxResults=1&part=snippet&q=suriname&type=video
     body:
       encoding: US-ASCII
@@ -25,7 +77,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 08 Mar 2023 03:59:30 GMT
+      - Wed, 08 Mar 2023 04:48:11 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -53,7 +105,7 @@ http_interactions:
           },
           "items": []
         }
-  recorded_at: Wed, 08 Mar 2023 03:59:30 GMT
+  recorded_at: Wed, 08 Mar 2023 04:48:11 GMT
 - request:
     method: get
     uri: https://api.pexels.com/v1/search?per_page=10&query=suriname
@@ -75,7 +127,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 08 Mar 2023 03:59:30 GMT
+      - Wed, 08 Mar 2023 04:48:11 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -83,17 +135,17 @@ http_interactions:
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7a482a77ad5a2eed-LAX
+      - 7a4871c6af132f43-LAX
       Access-Control-Allow-Origin:
       - "*"
       Age:
-      - '2284'
+      - '5205'
       Cache-Control:
       - max-age=86400
       Etag:
       - W/"7245dc7e72c8844501149842d30cbf65"
       Expires:
-      - Thu, 09 Mar 2023 03:59:30 GMT
+      - Thu, 09 Mar 2023 04:48:11 GMT
       Cf-Cache-Status:
       - HIT
       X-Frame-Options:
@@ -101,7 +153,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '25000'
       X-Ratelimit-Remaining:
-      - '24912'
+      - '24907'
       X-Ratelimit-Reset:
       - '1680736644'
       X-Request-Id:
@@ -111,8 +163,8 @@ http_interactions:
       X-Server:
       - caterpillar
       Set-Cookie:
-      - __cf_bm=9xUVokmrjjCF7lc5kyjUxho6J1rjI53qeyW.7oD1LgY-1678247970-0-AczRVLLmjlvFReeicxpeZPsBoykQu9hxLJfy+miZzKgxRvFCFcWCFLO9/WGwq+vIblCG1Zhns6NMp21oqc6mjYY=;
-        path=/; expires=Wed, 08-Mar-23 04:29:30 GMT; domain=.pexels.com; HttpOnly;
+      - __cf_bm=EyRSV7qXHKZ_B9aCxKBZKAv1if4ubzzOC7bVCGUIprg-1678250891-0-Aa0Xx6AFpKt8Tt7zivCHSAL/3Nd4B1OJZ5z1OtfW/BqT6gwDMKhHJXrLiLw6HGmEtbnMaz0QhktxJYdVcgwdpIs=;
+        path=/; expires=Wed, 08-Mar-23 05:18:11 GMT; domain=.pexels.com; HttpOnly;
         Secure; SameSite=None
       Vary:
       - Accept-Encoding
@@ -131,5 +183,5 @@ http_interactions:
         Basket of Surinam Cherries"},{"id":14778816,"width":1728,"height":2592,"url":"https://www.pexels.com/photo/gold-silver-christmas-tree-14778816/","photographer":"Otniel
         Perica","photographer_url":"https://www.pexels.com/@otniel-perica-393937317","photographer_id":393937317,"avg_color":"#523923","src":{"original":"https://images.pexels.com/photos/14778816/pexels-photo-14778816.jpeg","large2x":"https://images.pexels.com/photos/14778816/pexels-photo-14778816.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/14778816/pexels-photo-14778816.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/14778816/pexels-photo-14778816.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/14778816/pexels-photo-14778816.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/14778816/pexels-photo-14778816.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/14778816/pexels-photo-14778816.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/14778816/pexels-photo-14778816.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Gold
         Silver Christmas tree "}],"total_results":4}'
-  recorded_at: Wed, 08 Mar 2023 03:59:30 GMT
+  recorded_at: Wed, 08 Mar 2023 04:48:11 GMT
 recorded_with: VCR 6.1.0

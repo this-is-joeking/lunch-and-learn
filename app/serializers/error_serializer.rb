@@ -17,6 +17,15 @@ class ErrorSerializer
     }
   end
 
+  def self.invalid_country(country)
+    {
+      "error": {
+        "code": 400,
+        "message": "Invalid request, #{country} is not a country in our system"
+      }
+    }
+  end
+
   def self.missing_param(param)
     {
       "error": {

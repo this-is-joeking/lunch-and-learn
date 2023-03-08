@@ -81,7 +81,7 @@ RSpec.describe 'get learning resources by country', :vcr do
     end
   end
 
-  xit 'returns an error message if country param is not a country' do
+  it 'returns an error message if country param is not a country' do
     country = 'asdfa'
 
     get "/api/v1/learning_resources?country=#{country}"
@@ -94,7 +94,7 @@ RSpec.describe 'get learning resources by country', :vcr do
     expect(error_message.keys).to eq([:error])
     expect(error_message[:error].keys.sort).to eq(%i[code message].sort)
     expect(error_message[:error][:code]).to eq(400)
-    expect(error_message[:error][:message]).to eq('Invalid request, value for country passed is not a country')
+    expect(error_message[:error][:message]).to eq("Invalid request, #{country} is not a country in our system")
   end
 
   it 'returns an error message if country param is an empty string' do

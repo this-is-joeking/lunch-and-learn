@@ -2,6 +2,57 @@
 http_interactions:
 - request:
     method: get
+    uri: https://restcountries.com/v3.1/name/guatemala?fullText=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 08 Mar 2023 04:48:08 GMT
+      Server:
+      - Apache/2.4.38 (Debian)
+      Cache-Control:
+      - public, immutable, max-age=31556926
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1337'
+    body:
+      encoding: UTF-8
+      string: '[{"name":{"common":"Guatemala","official":"Republic of Guatemala","nativeName":{"spa":{"official":"República
+        de Guatemala","common":"Guatemala"}}},"tld":[".gt"],"cca2":"GT","ccn3":"320","cca3":"GTM","cioc":"GUA","independent":true,"status":"officially-assigned","unMember":true,"currencies":{"GTQ":{"name":"Guatemalan
+        quetzal","symbol":"Q"}},"idd":{"root":"+5","suffixes":["02"]},"capital":["Guatemala
+        City"],"altSpellings":["GT"],"region":"Americas","subregion":"Central America","languages":{"spa":"Spanish"},"translations":{"ara":{"official":"جمهورية
+        غواتيمالا","common":"غواتيمالا"},"bre":{"official":"Republik Guatemala","common":"Guatemala"},"ces":{"official":"Republika
+        Guatemala","common":"Guatemala"},"cym":{"official":"Republic of Guatemala","common":"Guatemala"},"deu":{"official":"Republik
+        Guatemala","common":"Guatemala"},"est":{"official":"Guatemala Vabariik","common":"Guatemala"},"fin":{"official":"Guatemalan
+        tasavalta","common":"Guatemala"},"fra":{"official":"République du Guatemala","common":"Guatemala"},"hrv":{"official":"Republika
+        Gvatemala","common":"Gvatemala"},"hun":{"official":"Guatemalai Köztársaság","common":"Guatemala"},"ita":{"official":"Repubblica
+        del Guatemala","common":"Guatemala"},"jpn":{"official":"グアテマラ共和国","common":"グアテマラ"},"kor":{"official":"과테말라
+        공화국","common":"과테말라"},"nld":{"official":"Republiek Guatemala","common":"Guatemala"},"per":{"official":"جمهوری
+        گواتِمالا","common":"گواتِمالا"},"pol":{"official":"Republika Gwatemali","common":"Gwatemala"},"por":{"official":"República
+        da Guatemala","common":"Guatemala"},"rus":{"official":"Республика Гватемала","common":"Гватемала"},"slk":{"official":"Guatemalská
+        republika","common":"Guatemala"},"spa":{"official":"República de Guatemala","common":"Guatemala"},"srp":{"official":"Република
+        Гватемала","common":"Гватемала"},"swe":{"official":"Republiken Guatemala","common":"Guatemala"},"tur":{"official":"Guatemala
+        Cumhuriyeti","common":"Guatemala"},"urd":{"official":"جمہوریہ گواتیمالا","common":"گواتیمالا"},"zho":{"official":"危地马拉共和国","common":"危地马拉"}},"latlng":[15.5,-90.25],"landlocked":false,"borders":["BLZ","SLV","HND","MEX"],"area":108889.0,"demonyms":{"eng":{"f":"Guatemalan","m":"Guatemalan"},"fra":{"f":"Guatémaltèque","m":"Guatémaltèque"}},"flag":"\uD83C\uDDEC\uD83C\uDDF9","maps":{"googleMaps":"https://goo.gl/maps/JoRAbem4Hxb9FYbVA","openStreetMaps":"https://www.openstreetmap.org/relation/1521463"},"population":16858333,"gini":{"2014":48.3},"fifa":"GUA","car":{"signs":["GCA"],"side":"right"},"timezones":["UTC-06:00"],"continents":["North
+        America"],"flags":{"png":"https://flagcdn.com/w320/gt.png","svg":"https://flagcdn.com/gt.svg","alt":"The
+        flag of Guatemala is composed of three equal vertical bands of light blue,
+        white and light blue, with the national coat of arms centered in the white
+        band."},"coatOfArms":{"png":"https://mainfacts.com/media/images/coats_of_arms/gt.png","svg":"https://mainfacts.com/media/images/coats_of_arms/gt.svg"},"startOfWeek":"monday","capitalInfo":{"latlng":[14.62,-90.52]},"postalCode":{"format":"#####","regex":"^(\\d{5})$"}}]'
+  recorded_at: Wed, 08 Mar 2023 04:48:08 GMT
+- request:
+    method: get
     uri: https://www.googleapis.com/youtube/v3/search?channelId=UCluQ5yInbeAkkeCndNnUhpw&key=<YOUTUBE_API_KEY>&maxResults=1&part=snippet&q=guatemala&type=video
     body:
       encoding: US-ASCII
@@ -25,7 +76,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 08 Mar 2023 03:59:28 GMT
+      - Wed, 08 Mar 2023 04:48:09 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -89,7 +140,7 @@ http_interactions:
             }
           ]
         }
-  recorded_at: Wed, 08 Mar 2023 03:59:28 GMT
+  recorded_at: Wed, 08 Mar 2023 04:48:09 GMT
 - request:
     method: get
     uri: https://api.pexels.com/v1/search?per_page=10&query=guatemala
@@ -111,7 +162,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 08 Mar 2023 03:59:29 GMT
+      - Wed, 08 Mar 2023 04:48:09 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -119,7 +170,7 @@ http_interactions:
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7a482a6eed277c56-LAX
+      - 7a4871ba6b96318b-LAX
       Access-Control-Allow-Origin:
       - "*"
       Cache-Control:
@@ -127,7 +178,7 @@ http_interactions:
       Etag:
       - W/"f6f2c693ba59df22dff1c578bd3789fd"
       Expires:
-      - Thu, 09 Mar 2023 03:59:29 GMT
+      - Thu, 09 Mar 2023 04:48:09 GMT
       Cf-Cache-Status:
       - HIT
       X-Frame-Options:
@@ -135,7 +186,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '25000'
       X-Ratelimit-Remaining:
-      - '24914'
+      - '24909'
       X-Ratelimit-Reset:
       - '1680736644'
       X-Request-Id:
@@ -145,8 +196,8 @@ http_interactions:
       X-Server:
       - caterpillar
       Set-Cookie:
-      - __cf_bm=LvsDoCqp5Tb99Q9pdDCa66ST9bzto02ub4KUybbk1aE-1678247969-0-AXrv+tTv4jdVqknzLOikf4pB16ReKJg1RGeoCS4n6lRG0FXo/deQ7mS0RI3dyJekP3Wq+tVoMRlsL1p/dV8Qk8A=;
-        path=/; expires=Wed, 08-Mar-23 04:29:29 GMT; domain=.pexels.com; HttpOnly;
+      - __cf_bm=YKv24ExqDOpRBhHfFpYBvRYNS478sNbL_BBsRLIhN5w-1678250889-0-AW7sqFPTjs3xsc+wmkWZjwtcKLO9WKMVyyCnsbd8MYmkDDqxkXptf/a2wbbTsOLQ7/RhXkE/CTuGuAYYXAmI3pc=;
+        path=/; expires=Wed, 08-Mar-23 05:18:09 GMT; domain=.pexels.com; HttpOnly;
         Secure; SameSite=None
       Vary:
       - Accept-Encoding
@@ -177,5 +228,5 @@ http_interactions:
         Graves in Cemetery"},{"id":14843659,"width":6034,"height":4012,"url":"https://www.pexels.com/photo/green-trees-under-the-blue-sky-14843659/","photographer":"Luis
         A. Dumois N.","photographer_url":"https://www.pexels.com/@luis-a-dumois-n-3269789","photographer_id":3269789,"avg_color":"#959E8B","src":{"original":"https://images.pexels.com/photos/14843659/pexels-photo-14843659.jpeg","large2x":"https://images.pexels.com/photos/14843659/pexels-photo-14843659.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/14843659/pexels-photo-14843659.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/14843659/pexels-photo-14843659.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/14843659/pexels-photo-14843659.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/14843659/pexels-photo-14843659.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/14843659/pexels-photo-14843659.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/14843659/pexels-photo-14843659.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Green
         Trees Under the Blue Sky"}],"total_results":56,"next_page":"https://api.pexels.com/v1/search/?page=2\u0026per_page=10\u0026query=guatemala"}'
-  recorded_at: Wed, 08 Mar 2023 03:59:29 GMT
+  recorded_at: Wed, 08 Mar 2023 04:48:09 GMT
 recorded_with: VCR 6.1.0
