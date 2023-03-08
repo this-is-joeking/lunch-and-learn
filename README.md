@@ -72,16 +72,24 @@ Accept: application/json
 
 
 ## APIs used
-Random country functionality uses [REST Countries Documentation](https://restcountries.com/#api-endpoints-v3-all)
+- Random country functionality uses [REST Countries Documentation](https://restcountries.com/#api-endpoints-v3-all).  
 No API key needed
 
-Recipes provided by [Edamam Recipe API Documentation](https://developer.edamam.com/edamam-docs-recipe-api)
+- Recipes provided by [![Edamam Logo](https://i.ibb.co/0fRzNsv/white.png)](https://developer.edamam.com/edamam-docs-recipe-api).  
 Get your key [here](https://developer.edamam.com/edamam-recipe-api)
 
-Videos provided by YouTube via [Google's Youtube API](https://developers.google.com/youtube/v3/getting-started)
+
+- Videos provided by YouTube via [Google's Youtube API](https://developers.google.com/youtube/v3/getting-started).  
 Instructions for getting an API key are listed in the above link
 
-Images provided by [Pexel's Image API](https://www.pexels.com/api/)
+- Images provided by [Pexel's Image API](https://www.pexels.com/api/).  
 Get your key [here](https://www.pexels.com/api/register/)
 
-![Edamam Logo](https://i.ibb.co/0fRzNsv/white.png)
+## Future Iterations
+
+Next steps for this API  include 
+1. Implementing cacheing of calls to external APIs
+1. Adding an endpoint for users to delete a favorite
+1. Implementing authentication with login functionality using BCrypt
+1. Encrypting the API key so it is not stored as plain text in the database
+
