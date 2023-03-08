@@ -1,7 +1,7 @@
 module Api
   module V1
     class FavoritesController < ApplicationController
-      before_action :find_user, only: [:create, :index]
+      before_action :find_user, only: %i[create index]
 
       def create
         @user.favorites.create(favorite_params)
@@ -20,8 +20,13 @@ module Api
 
       def find_user
         @user = User.find_by(api_key: params[:api_key])
-        
-        render json: ErrorSerializer.invalid_key, status: :unauthorized unless @user
+        validate_user
+      end
+
+      def validate_user
+        return if @user
+
+        render json: ErrorSerializer.invalid_key, status: :unauthorized
       end
     end
   end
