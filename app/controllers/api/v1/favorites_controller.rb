@@ -4,7 +4,7 @@ module Api
       before_action :find_user, only: %i[create index]
 
       def create
-        @user.favorites.create(favorite_params)
+        @user.favorites.create!(favorite_params)
         render json: MessageSerializer.favorite_success, status: :created
       end
 

@@ -1,5 +1,7 @@
-class RecipeFacade
+class RecipeFacade < BaseFacade
   def self.by_country(country)
+    return if country && !valid?(country)
+
     country ||= random_country
 
     recipes_data = RecipeService.by_country(country)

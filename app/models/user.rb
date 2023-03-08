@@ -3,6 +3,7 @@ class User < ApplicationRecord
 
   validates_presence_of :name, :email
   validates_uniqueness_of :email, case_sensitive: false
+  validates :email, email_format: { message: 'is invalid' }
   validates_uniqueness_of :api_key
 
   before_create :create_api_key

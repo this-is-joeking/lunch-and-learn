@@ -2,6 +2,56 @@
 http_interactions:
 - request:
     method: get
+    uri: https://restcountries.com/v3.1/name/nauru?fullText=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 08 Mar 2023 06:39:21 GMT
+      Server:
+      - Apache/2.4.38 (Debian)
+      Cache-Control:
+      - public, immutable, max-age=31556926
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1231'
+    body:
+      encoding: UTF-8
+      string: '[{"name":{"common":"Nauru","official":"Republic of Nauru","nativeName":{"eng":{"official":"Republic
+        of Nauru","common":"Nauru"},"nau":{"official":"Republic of Nauru","common":"Nauru"}}},"tld":[".nr"],"cca2":"NR","ccn3":"520","cca3":"NRU","cioc":"NRU","independent":true,"status":"officially-assigned","unMember":true,"currencies":{"AUD":{"name":"Australian
+        dollar","symbol":"$"}},"idd":{"root":"+6","suffixes":["74"]},"capital":["Yaren"],"altSpellings":["NR","Naoero","Pleasant
+        Island","Republic of Nauru","Ripublik Naoero"],"region":"Oceania","subregion":"Micronesia","languages":{"eng":"English","nau":"Nauru"},"translations":{"ara":{"official":"جمهورية
+        ناورو","common":"ناورو"},"bre":{"official":"Republik Nauru","common":"Nauru"},"ces":{"official":"Republika
+        Nauru","common":"Nauru"},"cym":{"official":"Republic of Nauru","common":"Nauru"},"deu":{"official":"Republik
+        Nauru","common":"Nauru"},"est":{"official":"Nauru Vabariik","common":"Nauru"},"fin":{"official":"Naurun
+        tasavalta","common":"Nauru"},"fra":{"official":"République de Nauru","common":"Nauru"},"hrv":{"official":"Republika
+        Nauru","common":"Nauru"},"hun":{"official":"Naurui Köztársaság","common":"Nauru"},"ita":{"official":"Repubblica
+        di Nauru","common":"Nauru"},"jpn":{"official":"ナウル共和国","common":"ナウル"},"kor":{"official":"나우루
+        공화국","common":"나우루"},"nld":{"official":"Republiek Nauru","common":"Nauru"},"per":{"official":"جمهوری
+        نائورو","common":"نائورو"},"pol":{"official":"Republika Nauru","common":"Nauru"},"por":{"official":"República
+        de Nauru","common":"Nauru"},"rus":{"official":"Республика Науру","common":"Науру"},"slk":{"official":"Naurská
+        republika","common":"Nauru"},"spa":{"official":"República de Nauru","common":"Nauru"},"srp":{"official":"Република
+        Науру","common":"Науру"},"swe":{"official":"Republiken Nauru","common":"Nauru"},"tur":{"official":"Nauru
+        Cumhuriyeti","common":"Nauru"},"urd":{"official":"جمہوریہ ناورو","common":"ناورو"},"zho":{"official":"瑙鲁共和国","common":"瑙鲁"}},"latlng":[-0.53333333,166.91666666],"landlocked":false,"area":21.0,"demonyms":{"eng":{"f":"Nauruan","m":"Nauruan"},"fra":{"f":"Nauruane","m":"Nauruan"}},"flag":"\uD83C\uDDF3\uD83C\uDDF7","maps":{"googleMaps":"https://goo.gl/maps/kyAGw6XEJgjSMsTK7","openStreetMaps":"https://www.openstreetmap.org/relation/571804"},"population":10834,"gini":{"2012":34.8},"car":{"signs":["NAU"],"side":"left"},"timezones":["UTC+12:00"],"continents":["Oceania"],"flags":{"png":"https://flagcdn.com/w320/nr.png","svg":"https://flagcdn.com/nr.svg","alt":"The
+        flag of Nauru has a dark blue field with a thin yellow horizontal band across
+        the center and a large white twelve-pointed star beneath the horizontal band
+        on the hoist side of the field."},"coatOfArms":{"png":"https://mainfacts.com/media/images/coats_of_arms/nr.png","svg":"https://mainfacts.com/media/images/coats_of_arms/nr.svg"},"startOfWeek":"monday","capitalInfo":{"latlng":[-0.55,166.92]}}]'
+  recorded_at: Wed, 08 Mar 2023 06:39:21 GMT
+- request:
+    method: get
     uri: https://www.googleapis.com/youtube/v3/search?channelId=UCluQ5yInbeAkkeCndNnUhpw&key=<YOUTUBE_API_KEY>&maxResults=1&part=snippet&q=nauru&type=video
     body:
       encoding: US-ASCII
@@ -25,7 +75,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Tue, 07 Mar 2023 22:50:48 GMT
+      - Wed, 08 Mar 2023 06:39:22 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -89,7 +139,7 @@ http_interactions:
             }
           ]
         }
-  recorded_at: Tue, 07 Mar 2023 22:50:48 GMT
+  recorded_at: Wed, 08 Mar 2023 06:39:21 GMT
 - request:
     method: get
     uri: https://api.pexels.com/v1/search?per_page=10&query=nauru
@@ -111,7 +161,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 07 Mar 2023 22:50:48 GMT
+      - Wed, 08 Mar 2023 06:39:22 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -119,7 +169,7 @@ http_interactions:
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7a4666452c5431cd-LAX
+      - 7a4914a378582a94-LAX
       Access-Control-Allow-Origin:
       - "*"
       Cache-Control:
@@ -127,7 +177,7 @@ http_interactions:
       Etag:
       - W/"5cb3585f53d361d87a93bc28342a022b"
       Expires:
-      - Wed, 08 Mar 2023 22:50:48 GMT
+      - Thu, 09 Mar 2023 06:39:22 GMT
       Cf-Cache-Status:
       - HIT
       X-Frame-Options:
@@ -135,7 +185,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '25000'
       X-Ratelimit-Remaining:
-      - '24932'
+      - '24898'
       X-Ratelimit-Reset:
       - '1680736644'
       X-Request-Id:
@@ -145,8 +195,8 @@ http_interactions:
       X-Server:
       - bulldog
       Set-Cookie:
-      - __cf_bm=osFp2EoePAQF2ebJnp_5rCJCuSFU32ZfwFuyWC8.nPA-1678229448-0-ARfvl4/H+pkhI6kTLhxFJkkW6OJce+I3gDtvbvypj6Z8qPdvGQfNjQrQAkmaVhPYaY1zRUoPsr1UyG24CZE50ng=;
-        path=/; expires=Tue, 07-Mar-23 23:20:48 GMT; domain=.pexels.com; HttpOnly;
+      - __cf_bm=GfMf9T.Ri3QHS_7gXMf47X_w0PgB8iKnFfRpbyjdtKQ-1678257562-0-AbZgASbXkJVbu4meYmt0gydsya4ZQYbeBUsMhoAd7lofxoLJwp346xpzkV1p3GyJNuQjfPaJ4wa/Srb8zBwYV6o=;
+        path=/; expires=Wed, 08-Mar-23 07:09:22 GMT; domain=.pexels.com; HttpOnly;
         Secure; SameSite=None
       Vary:
       - Accept-Encoding
@@ -157,5 +207,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"page":1,"per_page":10,"photos":[],"total_results":0}'
-  recorded_at: Tue, 07 Mar 2023 22:50:48 GMT
+  recorded_at: Wed, 08 Mar 2023 06:39:22 GMT
 recorded_with: VCR 6.1.0
