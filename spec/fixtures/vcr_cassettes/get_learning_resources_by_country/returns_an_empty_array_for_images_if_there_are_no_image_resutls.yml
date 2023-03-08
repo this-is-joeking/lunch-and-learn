@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 08 Mar 2023 05:38:24 GMT
+      - Wed, 08 Mar 2023 06:39:21 GMT
       Server:
       - Apache/2.4.38 (Debian)
       Cache-Control:
@@ -49,7 +49,7 @@ http_interactions:
         flag of Nauru has a dark blue field with a thin yellow horizontal band across
         the center and a large white twelve-pointed star beneath the horizontal band
         on the hoist side of the field."},"coatOfArms":{"png":"https://mainfacts.com/media/images/coats_of_arms/nr.png","svg":"https://mainfacts.com/media/images/coats_of_arms/nr.svg"},"startOfWeek":"monday","capitalInfo":{"latlng":[-0.55,166.92]}}]'
-  recorded_at: Wed, 08 Mar 2023 05:38:24 GMT
+  recorded_at: Wed, 08 Mar 2023 06:39:21 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/youtube/v3/search?channelId=UCluQ5yInbeAkkeCndNnUhpw&key=<YOUTUBE_API_KEY>&maxResults=1&part=snippet&q=nauru&type=video
@@ -75,7 +75,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 08 Mar 2023 05:38:24 GMT
+      - Wed, 08 Mar 2023 06:39:22 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -139,7 +139,7 @@ http_interactions:
             }
           ]
         }
-  recorded_at: Wed, 08 Mar 2023 05:38:24 GMT
+  recorded_at: Wed, 08 Mar 2023 06:39:21 GMT
 - request:
     method: get
     uri: https://api.pexels.com/v1/search?per_page=10&query=nauru
@@ -161,7 +161,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 08 Mar 2023 05:38:25 GMT
+      - Wed, 08 Mar 2023 06:39:22 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -169,17 +169,15 @@ http_interactions:
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7a48bb598e8e7ba4-LAX
+      - 7a4914a378582a94-LAX
       Access-Control-Allow-Origin:
       - "*"
-      Age:
-      - '5934'
       Cache-Control:
       - max-age=86400
       Etag:
       - W/"5cb3585f53d361d87a93bc28342a022b"
       Expires:
-      - Thu, 09 Mar 2023 05:38:25 GMT
+      - Thu, 09 Mar 2023 06:39:22 GMT
       Cf-Cache-Status:
       - HIT
       X-Frame-Options:
@@ -187,7 +185,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '25000'
       X-Ratelimit-Remaining:
-      - '24903'
+      - '24898'
       X-Ratelimit-Reset:
       - '1680736644'
       X-Request-Id:
@@ -197,8 +195,8 @@ http_interactions:
       X-Server:
       - bulldog
       Set-Cookie:
-      - __cf_bm=pq4Yws1PPPt2huB28y2I4UDNKgXwi5yi8Pd_hZrfVF4-1678253905-0-AUzJdVRww1qrPZac/NaxoxPlepJ4/i6Yy58igKDk0FW+SYmvkZ8Xyk94vVvKgfZkf3jNN9GuXhBDk0PkCnWDxd0=;
-        path=/; expires=Wed, 08-Mar-23 06:08:25 GMT; domain=.pexels.com; HttpOnly;
+      - __cf_bm=GfMf9T.Ri3QHS_7gXMf47X_w0PgB8iKnFfRpbyjdtKQ-1678257562-0-AbZgASbXkJVbu4meYmt0gydsya4ZQYbeBUsMhoAd7lofxoLJwp346xpzkV1p3GyJNuQjfPaJ4wa/Srb8zBwYV6o=;
+        path=/; expires=Wed, 08-Mar-23 07:09:22 GMT; domain=.pexels.com; HttpOnly;
         Secure; SameSite=None
       Vary:
       - Accept-Encoding
@@ -209,5 +207,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"page":1,"per_page":10,"photos":[],"total_results":0}'
-  recorded_at: Wed, 08 Mar 2023 05:38:24 GMT
+  recorded_at: Wed, 08 Mar 2023 06:39:22 GMT
 recorded_with: VCR 6.1.0
