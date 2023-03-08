@@ -10,7 +10,7 @@ RSpec.describe User do
     it { should validate_presence_of :email }
     it { should validate_uniqueness_of(:email).case_insensitive }
     it { should validate_presence_of :name }
-    it { should validate_email_format_of(:email).with_message("is invalid") }
+    it { should validate_email_format_of(:email).with_message('is invalid') }
   end
 
   describe '#create_api_key' do

@@ -130,6 +130,6 @@ RSpec.describe 'creating a new user' do
     expect(error_message.keys).to eq([:error])
     expect(error_message[:error].keys.sort).to eq(%i[code message].sort)
     expect(error_message[:error][:code]).to eq(422)
-    expect(error_message[:error][:message]).to eq("Validation failed: Email is invalid")
+    expect(error_message[:error][:message]).to eq('Validation failed: Email is invalid')
   end
 end
