@@ -12,5 +12,5 @@ class CountryService
     response = conn.get("/v3.1/name/#{country}", { fullText: true })
     response.status
   end
-  # TODO write a test for this
+  # TODO: write a test for this
 end

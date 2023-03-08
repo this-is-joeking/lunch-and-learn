@@ -8,7 +8,7 @@ module Api
 
         if learning_resource.is_a?(LearningResource)
           render json: LearningResourceSerializer.new(learning_resource), status: :ok
-        else 
+        else
           render json: ErrorSerializer.invalid_country(params[:country]), status: :bad_request
         end
       end

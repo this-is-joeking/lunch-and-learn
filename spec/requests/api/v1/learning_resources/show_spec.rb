@@ -114,7 +114,7 @@ RSpec.describe 'get learning resources by country', :vcr do
   end
 
   it 'returns an error message if country param is missing' do
-    get "/api/v1/learning_resources"
+    get '/api/v1/learning_resources'
 
     error_message = JSON.parse(response.body, symbolize_names: true)
 

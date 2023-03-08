@@ -14,9 +14,9 @@ module Api
       private
 
       def check_if_country_is_empty
-        if params[:country] == ''
-          render json: {data: []}, status: :ok
-        end
+        return unless params[:country] == ''
+
+        render json: { data: [] }, status: :ok
       end
     end
   end
