@@ -11,9 +11,13 @@ module Api
       private
 
       def validate_params
-        return if params[:country]
+        return if params[:country].present?
 
-        render json: ErrorSerializer.missing_param('country'), status: :bad_request
+        if params[:country]
+          render json: ErrorSerializer.missing_value('country'), status: :bad_request
+        else
+          render json: ErrorSerializer.missing_param('country'), status: :bad_request
+        end
       end
     end
   end

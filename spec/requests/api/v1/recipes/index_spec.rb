@@ -26,7 +26,7 @@ RSpec.describe 'get recipes by country', :vcr do
     end
   end
 
-  it 'returns an empty array if country param is empty or no results' do
+  it 'returns an empty array if country param is an empty string' do
     country = ''
 
     get "/api/v1/recipes?country=#{country}"

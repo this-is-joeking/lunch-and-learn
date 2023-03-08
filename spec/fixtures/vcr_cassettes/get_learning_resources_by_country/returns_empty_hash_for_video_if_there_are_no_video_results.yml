@@ -25,7 +25,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Tue, 07 Mar 2023 22:50:49 GMT
+      - Wed, 08 Mar 2023 03:59:30 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -53,7 +53,7 @@ http_interactions:
           },
           "items": []
         }
-  recorded_at: Tue, 07 Mar 2023 22:50:48 GMT
+  recorded_at: Wed, 08 Mar 2023 03:59:30 GMT
 - request:
     method: get
     uri: https://api.pexels.com/v1/search?per_page=10&query=suriname
@@ -75,7 +75,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 07 Mar 2023 22:50:49 GMT
+      - Wed, 08 Mar 2023 03:59:30 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -83,15 +83,17 @@ http_interactions:
       Connection:
       - keep-alive
       Cf-Ray:
-      - 7a466648fb507c73-LAX
+      - 7a482a77ad5a2eed-LAX
       Access-Control-Allow-Origin:
       - "*"
+      Age:
+      - '2284'
       Cache-Control:
       - max-age=86400
       Etag:
       - W/"7245dc7e72c8844501149842d30cbf65"
       Expires:
-      - Wed, 08 Mar 2023 22:50:49 GMT
+      - Thu, 09 Mar 2023 03:59:30 GMT
       Cf-Cache-Status:
       - HIT
       X-Frame-Options:
@@ -99,7 +101,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '25000'
       X-Ratelimit-Remaining:
-      - '24931'
+      - '24912'
       X-Ratelimit-Reset:
       - '1680736644'
       X-Request-Id:
@@ -109,8 +111,8 @@ http_interactions:
       X-Server:
       - caterpillar
       Set-Cookie:
-      - __cf_bm=4mQWXCvxtQ0Jb8SZkmAj909tH_HR5.jgX31hfBeJDm0-1678229449-0-AflPPNMQ2yySAS0a/WCG0aUml4oTxJ/DXmqbKQZBOtT4dCERynNeeZ0Rvez313BiQQrJ++acRaNYs+otwssdvBU=;
-        path=/; expires=Tue, 07-Mar-23 23:20:49 GMT; domain=.pexels.com; HttpOnly;
+      - __cf_bm=9xUVokmrjjCF7lc5kyjUxho6J1rjI53qeyW.7oD1LgY-1678247970-0-AczRVLLmjlvFReeicxpeZPsBoykQu9hxLJfy+miZzKgxRvFCFcWCFLO9/WGwq+vIblCG1Zhns6NMp21oqc6mjYY=;
+        path=/; expires=Wed, 08-Mar-23 04:29:30 GMT; domain=.pexels.com; HttpOnly;
         Secure; SameSite=None
       Vary:
       - Accept-Encoding
@@ -129,5 +131,5 @@ http_interactions:
         Basket of Surinam Cherries"},{"id":14778816,"width":1728,"height":2592,"url":"https://www.pexels.com/photo/gold-silver-christmas-tree-14778816/","photographer":"Otniel
         Perica","photographer_url":"https://www.pexels.com/@otniel-perica-393937317","photographer_id":393937317,"avg_color":"#523923","src":{"original":"https://images.pexels.com/photos/14778816/pexels-photo-14778816.jpeg","large2x":"https://images.pexels.com/photos/14778816/pexels-photo-14778816.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/14778816/pexels-photo-14778816.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/14778816/pexels-photo-14778816.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/14778816/pexels-photo-14778816.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/14778816/pexels-photo-14778816.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/14778816/pexels-photo-14778816.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/14778816/pexels-photo-14778816.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Gold
         Silver Christmas tree "}],"total_results":4}'
-  recorded_at: Tue, 07 Mar 2023 22:50:49 GMT
+  recorded_at: Wed, 08 Mar 2023 03:59:30 GMT
 recorded_with: VCR 6.1.0
