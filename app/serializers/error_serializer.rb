@@ -7,4 +7,13 @@ class ErrorSerializer
       }
     }
   end
+
+  def self.invalid_key
+    {
+      "error": {
+        "code": 401,
+        "message": 'Not authorized, invalid API Key'
+      }
+    }
+  end
 end

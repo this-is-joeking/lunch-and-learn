@@ -3,8 +3,12 @@ module Api
     class FavoritesController < ApplicationController
       before_action :find_user, only: :create
       def create
-        @user.favorites.create(favorite_params)
-        render json: MessageSerializer.favorite_success, status: :created
+        if @user
+          @user.favorites.create(favorite_params)
+          render json: MessageSerializer.favorite_success, status: :created
+        else
+          render json: ErrorSerializer.invalid_key, status: :unauthorized
+        end
       end
 
       private
