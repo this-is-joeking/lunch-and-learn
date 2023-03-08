@@ -13,4 +13,13 @@ RSpec.describe CountryService do
       end
     end
   end
+
+  describe '.find()' do
+    it 'returns the status code for querying the countries full name' do
+      expect(CountryService.find('germany')).to eq(200)
+      expect(CountryService.find('GERMAny')).to eq(200)
+      expect(CountryService.find('greece')).to eq(200)
+      expect(CountryService.find('notacountry')).to eq(404)
+    end
+  end
 end
