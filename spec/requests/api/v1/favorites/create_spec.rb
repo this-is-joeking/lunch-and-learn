@@ -21,7 +21,7 @@ RSpec.describe 'user adding a favorite recipe' do
     expect(response).to be_successful
     expect(response).to have_http_status(201)
     expect(success_message).to be_a Hash
-    expect(success_message).to eq({ success: "Favorite added successfully" })
+    expect(success_message).to eq({ success: 'Favorite added successfully' })
     expect(user.favorites.count).to eq(1)
     expect(Favorite.last.country).to eq('thailand')
     expect(Favorite.last.recipe_link).to eq('https://www.tastingtable.com/pad_thai')
@@ -48,7 +48,7 @@ RSpec.describe 'user adding a favorite recipe' do
     expect(response).to have_http_status(401)
     expect(error_message).to be_a Hash
     expect(error_message.keys).to eq([:error])
-    expect(error_message[:error].keys.sort).to eq([:code, :message].sort)
+    expect(error_message[:error].keys.sort).to eq(%i[code message].sort)
     expect(error_message[:error][:code]).to eq(401)
     expect(error_message[:error][:message]).to eq('Not authorized, invalid API Key')
     expect(Favorite.count).to eq(0)
