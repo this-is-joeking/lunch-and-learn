@@ -53,4 +53,29 @@ RSpec.describe 'user adding a favorite recipe' do
     expect(error_message[:error][:message]).to eq('Not authorized, invalid API Key')
     expect(Favorite.count).to eq(0)
   end
+
+  it 'responds with an error message if a required param is missing' do
+    user = create(:user)
+
+    headers = {
+      'CONTENT_TYPE' => 'application/json',
+      'ACCEPT' => 'application/json'
+    }
+    body = {
+      api_key: user.api_key,
+      recipe_link: 'https://www.tastingtable.com/pad_thai',
+      recipe_title: 'Pad Thai'
+    }
+    post '/api/v1/favorites', headers: headers, params: body.to_json
+
+    error_message = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response).to_not be_successful
+    expect(response).to have_http_status(422)
+    expect(error_message).to be_a Hash
+    expect(error_message.keys).to eq([:error])
+    expect(error_message[:error].keys.sort).to eq(%i[code message].sort)
+    expect(error_message[:error][:code]).to eq(422)
+    expect(error_message[:error][:message]).to eq("Validation failed: Country can't be blank")
+  end
 end
